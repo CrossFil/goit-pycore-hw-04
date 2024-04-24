@@ -24,6 +24,5 @@ def print_cats_info(cats_info):
     
     print("]")
 
-# Приклад використання
 cats_info = get_cats_info("cats_file.txt")
 print_cats_info(cats_info)
