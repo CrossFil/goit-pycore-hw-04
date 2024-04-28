@@ -1,4 +1,8 @@
+"""Home work #2"""
+from pprint import pprint
+
 def get_cats_info(path):
+    """функція виведення інформації про котів"""
     cats_list = []
     try:
         with open(path, 'r', encoding='utf-8') as file:
@@ -11,18 +15,7 @@ def get_cats_info(path):
                 cats_list.append(cat_info)
     except FileNotFoundError:
         print("Файл не знайдено.")
-    except Exception as e:
-        print(f"Виникла помилка: {e}")
-
     return cats_list
 
-def print_cats_info(cats_info):
-    print("[")
-
-    for cat in cats_info:
-        print(f"    {cat},")
-    
-    print("]")
-
 cats_info = get_cats_info("cats_file.txt")
-print_cats_info(cats_info)
+pprint(cats_info)
